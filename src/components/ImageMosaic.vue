@@ -80,7 +80,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
         <div v-if="isOpen" class="lb" @click.self="close">
           <button class="lb-close" @click="close" aria-label="Close">✕</button>
           
-          <button class="lb-nav prev" @click.stop="prev" aria-label="Previous">‹</button>
+          <button class="lb-nav prev" @click.stop="prev" aria-label="Previous">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
           <div class="lb-content">
             <transition name="lb-slide" mode="out-in">
@@ -103,7 +105,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
             </transition>
           </div>
 
-          <button class="lb-nav next" @click.stop="next" aria-label="Next">›</button>
+          <button class="lb-nav next" @click.stop="next" aria-label="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
           
           <div class="lb-count">{{ idx + 1 }} / {{ props.images.length }}</div>
         </div>
@@ -205,10 +209,11 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 
 .lb-nav {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 10100;
-  background: rgba(255,255,255,0.05); border: 0;
-  color: #fff; width: 50px; height: 50px; border-radius: 50%;
-  font-size: 2.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.1); border: 0;
+  color: #fff; width: 44px; height: 44px; border-radius: 50%;
+  font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 .lb-nav:hover { background: rgba(255,255,255,0.15); }
 .lb-nav.prev { left: 10px }
@@ -224,7 +229,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 @media (max-width: 640px) {
   .lb-media-frame { max-width: 100vw; max-height: 85vh; border-radius: 0; border: 0; background: transparent; }
   .lb-media { max-width: 100vw; max-height: 85vh; }
-  .lb-nav { width: 40px; height: 40px; font-size: 1.8rem; background: rgba(0,0,0,0.2); }
+  .lb-nav { width: 38px; height: 38px; font-size: 1rem; background: rgba(0,0,0,0.4); }
   .lb-close { top: 15px; right: 15px; width: 40px; height: 40px; }
   .lb-content { padding: 5px; }
 }

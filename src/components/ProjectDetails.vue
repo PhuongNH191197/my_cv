@@ -1,93 +1,98 @@
-<!-- ProjectModal.vue -->
+<!-- ProjectModal.vue - Redesigned for Airy Premium Feel -->
 <template>
-  <div class="modal-overlay" @click.self="$emit('close')" role="dialog" aria-modal="true">
-    <div class="modal">
-      <header class="modal-header">
-        <h2 class="text-truncate" :title="project.name">{{ project.name }}</h2>
+  <Teleport to="body">
+    <transition name="modal-fade">
+      <div v-if="project" class="modal-overlay" @click.self="$emit('close')" role="dialog" aria-modal="true">
+        <div class="modal airy-modal">
+          <!-- Top-Right Close Button (Standard Lightbox Style) -->
+          <button class="top-close" @click="$emit('close')" :aria-label="t('projects.details.close')">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
 
-        <!-- Badge trạng thái: dùng key i18n & class theo status -->
-        <span class="badge" :class="statusClass" style="flex-shrink: 0">
-          {{ t(`projects.status.${normalizedStatus}`) }}
-        </span>
+          <div class="modal-content custom-scroll">
+            <!-- Hero Title -->
+            <header class="hero-header">
+              <h1>{{ project.name }}</h1>
+            </header>
 
-        <button class="close-btn" @click="$emit('close')" :aria-label="t('projects.details.close')" style="flex-shrink: 0">✕</button>
-      </header>
+            <!-- Premium Info List (No boxes, just airy rows) -->
+            <div class="airy-info">
+              <div class="airy-row status-highlight">
+                <span class="lbl">{{ t('projects.details.status') }}</span>
+                <span class="badge" :class="statusClass">
+                  {{ t(`projects.status.${normalizedStatus}`) }}
+                </span>
+              </div>
+              <div class="airy-row">
+                <span class="lbl">{{ t('projects.details.client') }}</span>
+                <span class="val">{{ project.client }}</span>
+              </div>
+              <div class="airy-row">
+                <span class="lbl">{{ t('projects.details.domain') }}</span>
+                <span class="val">{{ project.domain }}</span>
+              </div>
+              <div class="airy-row">
+                <span class="lbl">{{ t('projects.details.country') }}</span>
+                <span class="val">{{ project.country }}</span>
+              </div>
+              <div class="airy-row">
+                <span class="lbl">{{ t('projects.details.year') }}</span>
+                <span class="val">{{ project.year }}</span>
+              </div>
+              <div class="airy-row">
+                <span class="lbl">{{ t('projects.details.type') }}</span>
+                <span class="val">{{ t(`projects.types.${normalizedType}`) }}</span>
+              </div>
+            </div>
 
-      <!-- Grid Info -->
-      <div class="info-grid">
-        <div class="text-truncate">
-          <strong>{{ t('projects.details.client') }}</strong>
-          <p class="text-truncate" :title="project.client">{{ project.client }}</p>
-        </div>
-        <div class="text-truncate">
-          <strong>{{ t('projects.details.domain') }}</strong>
-          <p class="text-truncate" :title="project.domain">{{ project.domain }}</p>
-        </div>
-        <div class="text-truncate">
-          <strong>{{ t('projects.details.country') }}</strong>
-          <p class="text-truncate" :title="project.country">{{ project.country }}</p>
-        </div>
-        <div class="text-truncate">
-          <strong>{{ t('projects.details.year') }}</strong>
-          <p class="text-truncate" :title="project.year">{{ project.year }}</p>
-        </div>
-        <div class="text-truncate">
-          <strong>{{ t('projects.details.type') }}</strong>
-          <p class="text-truncate" :title="t(`projects.types.${normalizedType}`)">{{ t(`projects.types.${normalizedType}`) }}</p>
-        </div>
-        <div class="text-truncate">
-          <strong>{{ t('projects.details.status') }}</strong>
-          <p class="text-truncate" :title="t(`projects.status.${normalizedStatus}`)">{{ t(`projects.status.${normalizedStatus}`) }}</p>
+            <div class="main-details">
+              <!-- Summary -->
+              <section class="sec summary-sec">
+                <p>{{ project.summary }}</p>
+              </section>
+
+              <!-- Responsibilities -->
+              <section v-if="project.responsibilities?.length" class="sec">
+                <h3><i class="fa-solid fa-circle-check"></i> {{ t('projects.details.responsibilities') }}</h3>
+                <ul class="task-list">
+                  <li v-for="(r,i) in project.responsibilities" :key="i">{{ r }}</li>
+                </ul>
+              </section>
+
+              <!-- Tags -->
+              <div class="tags-container">
+                <section v-if="project.protocols?.length" class="sec">
+                  <h3><i class="fa-solid fa-shield-halved"></i> {{ t('projects.details.protocols') }}</h3>
+                  <div class="tag-wrap">
+                    <span v-for="p in project.protocols" :key="p" class="pill">{{ p }}</span>
+                  </div>
+                </section>
+
+                <section v-if="project.tech?.length" class="sec">
+                  <h3><i class="fa-solid fa-terminal"></i> {{ t('projects.details.technologies') }}</h3>
+                  <div class="tag-wrap highlighting">
+                    <span v-for="tch in project.tech" :key="tch" class="pill tech-pill">{{ tch }}</span>
+                  </div>
+                </section>
+              </div>
+
+              <!-- Links -->
+              <section v-if="hasLinks" class="sec links-sec">
+                <div class="action-buttons">
+                  <a v-if="project.demo" :href="project.demo" target="_blank" class="airy-btn glow">
+                    <i class="fa-solid fa-bolt"></i> {{ t('projects.details.demo') }}
+                  </a>
+                  <a v-if="project.repo" :href="project.repo" target="_blank" class="airy-btn secondary">
+                    <i class="fa-brands fa-github"></i> Repository
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Summary -->
-      <p class="summary">{{ project.summary }}</p>
-
-      <!-- Responsibilities -->
-      <section v-if="project.responsibilities?.length">
-        <h3>{{ t('projects.details.responsibilities') }}</h3>
-        <ul class="list">
-          <li v-for="(r,i) in project.responsibilities" :key="i">
-            <i class="fa-solid fa-check"></i> {{ r }}
-          </li>
-        </ul>
-      </section>
-
-      <!-- Protocols -->
-      <section v-if="project.protocols?.length">
-        <h3>{{ t('projects.details.protocols') }}</h3>
-        <div class="tags">
-          <span v-for="p in project.protocols" :key="p" class="tag">{{ p }}</span>
-        </div>
-      </section>
-
-      <!-- Technologies -->
-      <section v-if="project.tech?.length">
-        <h3>{{ t('projects.details.technologies') }}</h3>
-        <div class="tags">
-          <span v-for="tch in project.tech" :key="tch" class="tag">{{ tch }}</span>
-        </div>
-      </section>
-
-      <!-- Links (Demo / Repo) -->
-      <section v-if="hasLinks">
-        <h3>{{ t('projects.details.links') }}</h3>
-        <div class="links">
-          <a v-if="project.demo" class="btn-link" :href="project.demo" target="_blank" rel="noopener">
-            {{ t('projects.details.demo') }}
-          </a>
-          <a v-if="project.repo" class="btn-link" :href="project.repo" target="_blank" rel="noopener">
-            {{ t('projects.details.repo') }}
-          </a>
-        </div>
-      </section>
-
-      <footer class="modal-footer">
-        <button class="btn" @click="$emit('close')">{{ t('projects.details.close') }}</button>
-      </footer>
-    </div>
-  </div>
+    </transition>
+  </Teleport>
 </template>
 
 <script setup>
@@ -103,16 +108,10 @@ const props = defineProps({
 
 const { t } = useI18n()
 
-/**
- * Chuẩn hoá status/type để map sang i18n keys:
- * - status: active | shipped | archived (map từ progress -> active)
- * - type: web | backend | data | devops | mobile | ml
- */
 const normalizedStatus = computed(() => {
   const s = (props.project?.status || '').toString().trim().toLowerCase()
   if (s === 'progress' || s === 'in_progress' || s === 'ongoing') return 'active'
   if (['active', 'shipped', 'archived'].includes(s)) return s
-  // fallback
   return 'active'
 })
 
@@ -122,103 +121,136 @@ const normalizedType = computed(() => {
   return allowed.includes(t) ? t : 'web'
 })
 
-const statusClass = computed(() => normalizedStatus.value) // dùng làm class badge
-
+const statusClass = computed(() => normalizedStatus.value)
 const hasLinks = computed(() => !!(props.project?.demo || props.project?.repo))
 </script>
 
 <style scoped>
 /* Overlay */
 .modal-overlay {
-  position: fixed; inset: 0; background: rgba(0,0,0,.65);
+  position: fixed; inset: 0; background: rgba(5, 8, 15, 0.94);
   display: flex; align-items: center; justify-content: center;
-  z-index: 2000;
+  z-index: 999999;
+  backdrop-filter: blur(25px);
+  padding: env(safe-area-inset-top, 20px) 15px env(safe-area-inset-bottom, 20px);
 }
 
-/* Modal */
-.modal {
-  overflow-y: auto;
-  max-height: 92vh;
-  background: var(--surface);
+/* Modal Frame */
+.airy-modal {
+  background: rgba(10, 15, 25, 0.98);
   color: var(--fg);
-  width: 720px; max-width: 95%;
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  box-shadow: 0 32px 64px rgba(0,0,0,0.6);
+  width: 100vw; height: 100vh;
+  max-width: 100%; max-height: 100%;
+  border-radius: 0;
   position: relative;
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(10px);
-  animation: slideIn .4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex; flex-direction: column;
+  box-sizing: border-box;
+  animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-@keyframes slideIn { from { opacity: 0; transform: scale(0.95) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
 
-/* Header */
-.modal-header {
-  display: flex; align-items: center; gap: 1rem;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
 }
-.modal-header h2 { font-size: 1.8rem; font-weight: 800; margin: 0; }
-.badge {
-  padding: 0.35rem 0.85rem; border-radius: 999px;
-  font-size: 0.85rem; font-weight: 700;
+
+/* Top Left Close Button - Sticky/Fixed */
+.top-close {
+  position: fixed; top: 1.5rem; right: 1.5rem; z-index: 1000;
+  background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); 
+  color: white; width: 44px; height: 44px; border-radius: 50%;
+  cursor: pointer; 
+  display: grid; place-items: center;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  padding: 0; margin: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-.badge.shipped { background: rgba(16, 185, 129, 0.15); color: #10b981; }
-.badge.active { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
-.badge.archived { background: rgba(148, 163, 184, 0.15); color: #94a3b8; }
+.top-close i { font-size: 1.2rem; line-height: 1; }
+.top-close:hover { background: rgba(255, 255, 255, 0.2); transform: rotate(-90deg); }
 
-.close-btn { background: rgba(255,255,255,0.05); border: 0; color: var(--muted); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); }
-.close-btn:hover { background: rgba(255,255,255,0.1); color: var(--fg); }
+/* Animation Overlay */
+.modal-fade-enter-active, .modal-fade-leave-active { transition: all 0.4s ease; }
+.modal-fade-enter-from, .modal-fade-leave-to { opacity: 0; }
 
-/* Grid Info */
-.info-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.25rem;
-  margin-bottom: 2rem;
+/* Content Wrapper */
+.modal-content {
+  padding: 5rem 2rem 3rem; /* Extra top padding for the fixed button */
+  overflow-y: auto; flex: 1;
+  box-sizing: border-box;
+  width: 100%; max-width: 900px; margin: 0 auto;
 }
-.info-grid div {
-  background: rgba(255,255,255,0.03);
-  padding: 1rem; border-radius: var(--radius-md);
-  border: 1px solid var(--glass-border);
+
+/* Hero Title */
+.hero-header { margin-bottom: 2.5rem; text-align: center; }
+.hero-header h1 { 
+  font-family: var(--font-serif); font-size: 2.5rem; font-weight: 800; 
+  margin: 0; line-height: 1.2; letter-spacing: -1px;
 }
-.info-grid strong { display: block; color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.25rem; }
-.info-grid p { margin: 0; font-weight: 700; font-size: 1rem; color: var(--fg); }
 
-/* Sections */
-.summary { margin: 1.5rem 0; line-height: 1.8; font-size: 1.1rem; color: var(--fg); }
-h3 { margin: 2rem 0 1rem; font-size: 1.2rem; font-weight: 800; font-family: var(--font-serif); }
+/* Airy Info List */
+.airy-info {
+  margin-bottom: 3.5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem;
+}
+.airy-row { 
+  display: flex; align-items: center; justify-content: space-between; 
+  padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); 
+}
+.airy-row:last-child { border-bottom: 0; }
+.airy-row .lbl { font-size: 0.85rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.airy-row .val { font-size: 1.05rem; font-weight: 700; text-align: right; color: var(--fg); }
 
-/* Responsibilities */
-.list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
-.list li { display: flex; gap: 0.85rem; align-items: flex-start; line-height: 1.5; }
-.list i { color: var(--primary); margin-top: 0.35rem; font-size: 0.9rem; }
+/* Status Row Highlights */
+.status-highlight { 
+  background: rgba(255,255,255,0.03); border-radius: 16px; margin: 0.5rem 0 1rem;
+  padding: 0.85rem 1.25rem; border: 1px solid rgba(255,255,255,0.06); 
+}
+.badge { padding: 0.4rem 1rem; border-radius: 10px; font-size: 0.8rem; font-weight: 900; text-transform: uppercase; }
+.badge.shipped { background: rgba(16, 185, 129, 0.15); color: #4ade80; border: 1px solid rgba(16, 185, 129, 0.2); }
+.badge.active { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
+.badge.archived { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.2); }
+
+/* Details Sections */
+.main-details { display: flex; flex-direction: column; gap: 3rem; }
+.sec h3 { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+.sec h3 i { font-size: 1rem; opacity: 0.7; }
+
+.summary-sec p { font-size: 1.2rem; line-height: 1.8; opacity: 0.95; margin: 0; }
+
+.task-list { list-style: none; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.2rem; }
+.task-list li { position: relative; line-height: 1.7; font-size: 1.1rem; }
+.task-list li::before { content: "•"; position: absolute; left: -1.5rem; color: var(--primary); font-weight: bold; font-size: 1.4rem; top: -0.1rem; }
 
 /* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.5rem; }
-.tag {
-  padding: 0.45rem 1rem; border-radius: 10px;
-  background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border);
-  font-size: 0.9rem; font-weight: 500;
-  transition: var(--transition-smooth);
+.tags-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.tag-wrap { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.pill { 
+  padding: 0.45rem 1rem; border-radius: 14px; 
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); 
+  font-size: 0.9rem; font-weight: 600; color: var(--muted); 
 }
-.tag:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+.tech-pill { border-color: rgba(34, 211, 238, 0.3); color: var(--secondary); background: rgba(34, 211, 238, 0.06); }
 
 /* Links */
-.links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
-.btn-link {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  padding: 0.75rem 1.5rem; border-radius: var(--radius-md);
-  background: var(--surface); border: 1px solid var(--glass-border);
-  color: var(--fg); text-decoration: none; font-weight: 700;
-  transition: var(--transition-smooth);
-}
-.btn-link:hover { border-color: var(--primary); transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.3); }
+.action-buttons { display: flex; gap: 1.25rem; }
+.airy-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 1.15rem; border-radius: 20px; text-decoration: none; font-weight: 800; font-size: 1.05rem; transition: all 0.4s ease; }
+.airy-btn.glow { background: var(--primary); color: #0b1220; box-shadow: 0 15px 35px var(--primary-glow); }
+.airy-btn.secondary { background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255, 255, 255, 0.15); }
+.airy-btn:hover { transform: translateY(-6px); filter: brightness(1.25); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
 
-/* Footer */
-.modal-footer { margin-top: 2.5rem; border-top: 1px solid var(--glass-border); padding-top: 1.5rem; text-align: right; }
-.btn {
-  padding: 0.75rem 2rem; border-radius: var(--radius-md); border: 0;
-  background: var(--primary); color: #0b1220; font-weight: 800; cursor: pointer;
-  transition: var(--transition-smooth);
+/* Custom Scroll */
+.custom-scroll::-webkit-scrollbar { width: 4px; }
+.custom-scroll::-webkit-scrollbar-track { background: transparent; }
+.custom-scroll::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 10px; }
+
+@media (max-width: 768px) {
+  .modal-content { padding: 2.25rem 1.75rem; }
+  .hero-header { margin-bottom: 2rem; }
+  .hero-header h1 { font-size: 1.65rem; }
+  .top-close { top: 1.25rem; right: 1.25rem; width: 40px; height: 40px; }
+  .tags-container { grid-template-columns: 1fr; gap: 2.5rem; }
+  .airy-row .lbl { font-size: 0.75rem; }
+  .airy-row .val { font-size: 0.95rem; }
+  .status-highlight { padding: 0.75rem 1rem; }
+  .summary-sec p { font-size: 1.1rem; }
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px var(--primary-glow); }
 </style>
