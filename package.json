@@ -1,0 +1,42 @@
+{
+  "name": "my-cv",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.{js,vue}\" --fix",
+    "api:dev": "cross-env NODE_ENV=development nodemon ./src/server/index.mjs",
+    "api:start": "cross-env NODE_ENV=production node ./src/server/index.mjs",
+    "dev:all": "concurrently -k -n api,vite -c yellow,cyan \"npm:api:dev\" \"npm:dev\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "@fortawesome/free-brands-svg-icons": "^7.0.1",
+    "@fortawesome/free-regular-svg-icons": "^7.0.1",
+    "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "@fortawesome/vue-fontawesome": "^3.1.2",
+    "axios": "^1.12.2",
+    "dayjs": "^1.11.18",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "openai": "^5.22.1",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.21",
+    "vue-i18n": "^11.1.12",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.36.0",
+    "eslint-plugin-vue": "^10.4.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "vite": "^5.4.11"
+  }
+}

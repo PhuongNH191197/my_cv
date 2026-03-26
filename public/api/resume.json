@@ -1,0 +1,887 @@
+{
+  "profile": {
+    "name": "IamFhug",
+    "title": "Software Engineer",
+    "location": "Ha Noi, Vietnam",
+    "summary": "Passionate engineer with 5+ years building web apps using Vue, Spring Boot, .NET and PostgreSQL.",
+    "avatar": "images/avatar.jpg",
+    "headline": "Xây dựng web app nhanh – sạch – tối ưu trải nghiệm phát triển (DX).",
+    "availability": "Open to interesting opportunities"
+  },
+  "about": {
+    "stats": {
+      "years": 7,
+      "projects": 13,
+      "talks": 3
+    },
+    "values": [
+      "Ownership",
+      "Craftsmanship",
+      "Move fast",
+      "Kindness"
+    ],
+    "interests": [
+      "Soccer",
+      "Pickleball",
+      "Charity",
+      "Teambuilding",
+      "Photography"
+    ],
+    "bio": [
+      "Mình bắt đầu sự nghiệp với Java Core và JSP/Servlet, tham gia phát triển các hệ thống viễn thông như CRBT/VRBT, Ads Platform, BuzzMe, V2T và Sing4U, làm việc trực tiếp với các nghiệp vụ thuê bao, charging, provisioning, media processing và tích hợp hệ thống telco qua SOAP/REST, SIP/RTP.",
+      "Sau đó mình chuyển sang Spring Boot để xây dựng các backend quy mô lớn theo kiến trúc event-driven và microservice, triển khai các nền tảng livestream, quản lý nội dung video, giải đấu và hệ thống đối soát/giám sát giao thông (VEC, eWIM), xử lý dữ liệu lớn với ClickHouse/PostgreSQL, RabbitMQ, Kafka và tối ưu hiệu năng truy vấn, workflow nghiệp vụ phức tạp.",
+      "Từ năm 2024, mình mở rộng sang .NET cho các dự án government và enterprise (AED, eWIM, VMS), tham gia thiết kế kiến trúc, xây dựng API, xử lý phân quyền, workflow duyệt, xuất báo cáo lớn và triển khai hệ thống on-premise.",
+      "Ở frontend, mình làm việc nhiều với Vue 3 + Vite và Angular cho CMS/Admin và portal người dùng; mình quan tâm mạnh đến DX, hiệu năng và trải nghiệm, đồng thời luôn đề cao tinh thần chia sẻ, làm việc tử tế và cùng đội nhóm xây dựng các hệ thống có giá trị thực tế."
+    ]
+  },
+  "experience": [
+    {
+      "company": "ACME Corp",
+      "role": "Senior Software Engineer",
+      "from": "2023-06",
+      "to": "present",
+      "tech": [
+        "Vue 3",
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "highlights": [
+        "Thiết kế kiến trúc FE module-hoá; giảm 30% thời gian build.",
+        "Tối ưu SSR + HTTP caching giúp FCP giảm ~40%.",
+        "Chuẩn hoá CI/CD, tự động hoá kiểm thử E2E cho các luồng chính."
+      ]
+    },
+    {
+      "company": "XYZ Fintech",
+      "role": "Software Engineer",
+      "from": "2021-01",
+      "to": "2023-05",
+      "tech": [
+        "Spring Boot",
+        "RabbitMQ",
+        "PostgreSQL",
+        "HAProxy",
+        "Vue 3"
+      ],
+      "highlights": [
+        "Xây dựng dịch vụ reconciliation và alerting theo event, ổn định ở mức hàng triệu bản ghi/ngày.",
+        "Giảm 25% chi phí DB nhờ tối ưu index/partition & batch job."
+      ]
+    },
+    {
+      "company": "Startup Labs",
+      "role": "Full-stack Developer",
+      "from": "2018-07",
+      "to": "2020-12",
+      "tech": [
+        ".NET",
+        "ASP.NET Core",
+        "PostgreSQL",
+        "Vue 2"
+      ],
+      "highlights": [
+        "Phát triển MVP cho 3 sản phẩm B2B; thời gian lên bản demo < 6 tuần.",
+        "Triển khai logging/monitoring (ELK) và guideline coding cho team."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "from": "2015",
+      "to": "2019",
+      "degree": "Cử nhân Kỹ thuật Phần mềm",
+      "school": "Đại học FPT",
+      "highlights": [
+        "Nền tảng OOP, Data Structures, Database, Web",
+        "Hoạt động CLB/Kỹ năng mềm"
+      ]
+    },
+    {
+      "from": "2018",
+      "to": "2021",
+      "degree": "Intern → Software Engineer",
+      "school": "FPT Software",
+      "highlights": [
+        "Thử việc/Thực tập 2018, vào chính thức sau đó",
+        "Tham gia các dự án web/service nội bộ"
+      ]
+    },
+    {
+      "from": "2021",
+      "to": null,
+      "degree": "Software Engineer",
+      "school": "ELCOM · Hà Nội",
+      "highlights": [
+        "Chuyển về Hà Nội 2021",
+        "Phát triển hệ thống web/service, tối ưu hiệu năng & DX"
+      ]
+    }
+  ],
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "JPA/Hibernate",
+    "PostgreSQL",
+    "Vue 3",
+    "Pinia",
+    "Vite",
+    "Axios",
+    "TypeScript/JavaScript",
+    ".NET",
+    "RabbitMQ",
+    "Docker"
+  ],
+  "skillsDetailed": [
+    {
+      "name": "Vue 3",
+      "level": 5,
+      "group": "Frontend"
+    },
+    {
+      "name": "Java",
+      "level": 4,
+      "group": "Backend"
+    },
+    {
+      "name": "Spring Boot",
+      "level": 4,
+      "group": "Backend"
+    },
+    {
+      "name": "JPA/Hibernate",
+      "level": 4,
+      "group": "Backend"
+    },
+    {
+      "name": ".NET (Core)",
+      "level": 3,
+      "group": "Backend"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": 4,
+      "group": "Database"
+    },
+    {
+      "name": "RabbitMQ",
+      "level": 3,
+      "group": "Messaging"
+    },
+    {
+      "name": "Kafka",
+      "level": 3,
+      "group": "Messaging"
+    },
+    {
+      "name": "Docker",
+      "level": 3,
+      "group": "DevOps"
+    },
+    {
+      "name": "CI/CD",
+      "level": 3,
+      "group": "DevOps"
+    },
+    {
+      "name": "Angular",
+      "level": 4,
+      "group": "Frontend"
+    },
+    {
+      "name": "React",
+      "level": 3,
+      "group": "Frontend"
+    },
+    {
+      "name": "Oracle",
+      "level": 3,
+      "group": "Database"
+    },
+    {
+      "name": "ClickHouse",
+      "level": 3,
+      "group": "Database"
+    },
+    {
+      "name": "SQL Server",
+      "level": 3,
+      "group": "Database"
+    },
+    {
+      "name": "MySQL/MariaDB",
+      "level": 4,
+      "group": "Database"
+    },
+    {
+      "name": "Grafana",
+      "level": 3,
+      "group": "Monitoring"
+    },
+    {
+      "name": "Prometheus",
+      "level": 3,
+      "group": "Monitoring"
+    },
+    {
+      "name": "AlertManager",
+      "level": 3,
+      "group": "Monitoring"
+    },
+    {
+      "name": "Elasticsearch",
+      "level": 3,
+      "group": "Logging/Observability"
+    },
+    {
+      "name": "Logstash",
+      "level": 3,
+      "group": "Logging/Observability"
+    },
+    {
+      "name": "Kibana",
+      "level": 3,
+      "group": "Logging/Observability"
+    },
+    {
+      "name": "HTTP/REST",
+      "level": 5,
+      "group": "Protocols/APIs"
+    },
+    {
+      "name": "SOAP",
+      "level": 3,
+      "group": "Protocols/APIs"
+    },
+    {
+      "name": "WebSocket",
+      "level": 4,
+      "group": "Protocols/APIs"
+    },
+    {
+      "name": "SSE",
+      "level": 3,
+      "group": "Protocols/APIs"
+    },
+    {
+      "name": "RTMP",
+      "level": 3,
+      "group": "Streaming/Livestream"
+    },
+    {
+      "name": "WebRTC",
+      "level": 3,
+      "group": "Streaming/Livestream"
+    },
+    {
+      "name": "RTSP",
+      "level": 3,
+      "group": "Streaming/Livestream"
+    },
+    {
+      "name": "HLS",
+      "level": 3,
+      "group": "Streaming/Livestream"
+    },
+    {
+      "name": "Keycloak",
+      "level": 4,
+      "group": "Auth & SSO"
+    },
+    {
+      "name": "OAuth2",
+      "level": 4,
+      "group": "Auth & SSO"
+    },
+    {
+      "name": "OpenID Connect",
+      "level": 4,
+      "group": "Auth & SSO"
+    },
+    {
+      "name": "SAML 2.0",
+      "level": 3,
+      "group": "Auth & SSO"
+    },
+    {
+      "name": "JWT",
+      "level": 5,
+      "group": "Auth & SSO"
+    },
+    {
+      "name": "LDAP",
+      "level": 3,
+      "group": "Identity/Directory"
+    },
+    {
+      "name": "Active Directory",
+      "level": 3,
+      "group": "Identity/Directory"
+    }
+  ],
+  "certs": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "year": 2023
+    },
+    {
+      "name": "Oracle Certified Professional, Java SE 11",
+      "year": 2022
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "A. Doe",
+      "title": "Engineering Manager",
+      "quote": "Phương chủ động, đưa giải pháp gọn, luôn giữ chất lượng code cao."
+    },
+    {
+      "name": "B. Tran",
+      "title": "Product Owner",
+      "quote": "Tốc độ triển khai nhanh, giao tiếp rõ ràng, tư duy sản phẩm tốt."
+    }
+  ],
+  "languages": [
+    {
+      "name": "Vietnamese",
+      "proficiency": "Native"
+    },
+    {
+      "name": "English",
+      "proficiency": "Professional working"
+    }
+  ],
+  "projects": [
+    {
+      "id": "hawkwise-vms",
+      "name": "Hawkwise – Video Management System (VMS + AI Analytics)",
+      "client": "Multiple Provinces",
+      "domain": "Smart City / ITS / Surveillance",
+      "country": "Vietnam",
+      "summary": "Nền tảng VMS tích hợp AI dùng cho giám sát giao thông, tòa nhà và đô thị thông minh: quản lý camera, livestream RTSP, lưu trữ video, phát hiện sự kiện bất thường và dashboard phân tích dữ liệu thời gian thực.",
+      "responsibilities": [
+        "Thiết kế và phát triển backend theo kiến trúc microservice (AI, Device, Notification, Identity, System Settings)",
+        "Xây dựng pipeline xử lý sự kiện AI (vehicle recognition, density, abnormal events) qua RabbitMQ và Kafka",
+        "Tích hợp Milestone XProtect, ONVIF và MediaMTX cho quản lý camera và livestream RTSP",
+        "Thiết kế ClickHouse schema và tối ưu truy vấn cho thống kê AI quy mô lớn",
+        "Phát triển dashboard AI Report: recognition rate, vehicle class, per-camera analytics",
+        "Triển khai hệ thống notification đa kênh (In-App, Telegram)",
+        "Xây dựng CI/CD, Docker Compose, triển khai on-premise cho nhiều môi trường",
+        "Tham gia vai trò technical leader: phân công task, review code, hỗ trợ presales và triển khai thực địa"
+      ],
+      "tech": [
+        ".NET 8",
+        "C#",
+        "React",
+        "WPF",
+        "PostgreSQL",
+        "ClickHouse",
+        "RabbitMQ",
+        "Kafka",
+        "MinIO",
+        "Redis",
+        "Docker"
+      ],
+      "protocols": [
+        "REST",
+        "RTSP",
+        "ONVIF"
+      ],
+      "status": "active",
+      "type": "Web / Desktop / Microservices",
+      "year": "2024–Present",
+      "link": "",
+      "note": "Dự án nội bộ Elcom, triển khai cho VEC và nhiều tỉnh thành (Thanh Hóa, Phú Lương, Elcom Building). Đang tiếp tục mở rộng module AI và báo cáo.",
+      "introLink": "",
+      "bgCover": "images/project/hawkwise-vms.png"
+    },
+    {
+      "id": "crbt-metfone-cambodia",
+      "name": "CRBT (Color Ring Back Tone) – Metfone",
+      "client": "Metfone (Viettel Cambodia)",
+      "domain": "Telecom",
+      "country": "Cambodia",
+      "summary": "Hệ thống CRBT cho phép thuê bao thiết lập nhạc chờ cuộc gọi; tích hợp sâu với hạ tầng viễn thông (HLR, GMSC, vSMSC, vOCS, BillingGW) và cung cấp các kênh IVR/SMS/WEB/USSD cho provisioning. Kiến trúc gồm các module Provisioning, Call, Billing, CMP, OMAP, DSU; hỗ trợ upload–transcode–publish nội dung, charging theo kịch bản nhà mạng, báo cáo KPI và vận hành/giám sát tập trung.",
+      "responsibilities": [
+        "Tham gia phát triển Core backend xử lý Provisioning/Call/Billing theo kịch bản Metfone (đăng ký/hủy dịch vụ; search/buy/present/copy bài hát qua SMS/WEB/IVR/USSD; set default song; lấy new/top list)",
+        "Xây dựng và vận hành các flow nghiệp vụ Provisioning, Call (DTMF mua bài khi nghe ringback), Billing (charge đăng ký/mua/renew thuê bao & bài hát)",
+        "Phát triển CMS/CMP cho CP upload nội dung (file + excel), validate, transcode và publish; Admin phê duyệt phát hành",
+        "Triển khai OMAP cho quản lý người dùng/nhóm quyền và báo cáo (Business KPI, Provisioning KPI, TPS, Traffic, System KPI)",
+        "Tích hợp các hệ thống viễn thông qua SOAP/REST và kết nối mạng lõi (HLR, GMSC, vSMSC, vOCS, BillingGW)",
+        "Thiết kế và tối ưu DSU/Storage cho nội dung đã transcode; đồng bộ metadata bài hát/CP/thuê bao",
+        "Xây dựng cơ chế Monitor & KPI: kiểm tra kết nối, theo dõi trạng thái module, đọc log tập trung; hỗ trợ emonitor",
+        "Tham gia vận hành: start/stop module, kiểm tra trạng thái, tail log theo từng bước flow; backup/restore, tối ưu tablespace, capacity planning",
+        "Tối ưu CSDL cho báo cáo lớn (sản lượng, doanh thu), thiết kế index và batch thống kê cuối ngày",
+        "Hỗ trợ troubleshooting theo từng loại lỗi (call/provisioning), truy vết theo flow và khắc phục sự cố production"
+      ],
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "JSP/Servlet",
+        "Oracle RAC 12cR2",
+        "Linux",
+        "Shell Script"
+      ],
+      "protocols": [
+        "SOAP",
+        "REST",
+        "SIP",
+        "RTP"
+      ],
+      "status": "shipped",
+      "type": "Web/Wap",
+      "year": "2020",
+      "link": "",
+      "note": "Triển khai CRBT cho Metfone: provisioning/call/billing/CMP/OMAP/DSU, monitor KPI và vận hành hệ thống.",
+      "introLink": "",
+      "bgCover": "images/project/crbt-metfone.png"
+    },
+    {
+      "id": "vrbt-viettel",
+      "name": "VRBT (Video Ring Back Tone)",
+      "client": "Viettel",
+      "domain": "Telecom",
+      "country": "vietnam",
+      "summary": "Hệ thống Video Ring Back Tone (meCall) là dịch vụ video chờ đầu tiên do Viettel triển khai, cho phép thuê bao thiết lập video tùy chỉnh hiển thị khi gọi đến, mang lại trải nghiệm thị giác mới mẻ thay cho âm thanh chờ truyền thống; đồng thời tạo kênh tương tác và quảng cáo video cho khách hàng cá nhân và doanh nghiệp trên nền tảng viễn thông.",
+      "responsibilities": [
+        "Tham gia phát triển Core backend bằng Spring Boot: xử lý nghiệp vụ thuê bao (đăng ký/hủy dịch vụ, cài đặt video, tặng video, copy video qua DTMF)",
+        "Quản lý vòng đời nội dung video: upload → encode → phân phối → gán cho thuê bao",
+        "Xây dựng các REST API phục vụ Web/WAP/App và CMS Admin",
+        "Đồng bộ trạng thái thuê bao với các hệ thống MPS, BCCS, WS Data",
+        "Phát triển CMS Admin bằng JSP/Servlet: quản lý nội dung (upload video, duyệt/từ chối, phân loại catalog)",
+        "Quản trị chiến dịch quảng cáo video (campaign, whitelist/blacklist, rule phát quảng cáo)",
+        "Phân quyền người dùng theo vai trò (Admin, CSKH, Content Provider, QC)",
+        "Xây dựng báo cáo sản lượng phát video, doanh thu và lượt xem quảng cáo",
+        "Thiết kế và triển khai flow duyệt nội dung & workflow nghiệp vụ (upload → encode → review → publish)",
+        "Thiết kế quy trình tạo & phê duyệt chiến dịch quảng cáo",
+        "Xây dựng quy trình cộng/trừ ví doanh nghiệp và cộng thưởng cho thuê bao",
+        "Tích hợp các hệ thống bên thứ ba qua SOAP/REST: IMS/CRBT (SIP signaling), MPS (SMS/charging), BCCS Provisioning, Airtime/CCAI, VAAA, MDM, Check SIM",
+        "Tham gia tối ưu database MariaDB/MySQL cho báo cáo lớn (sản lượng, doanh thu, quảng cáo)",
+        "Thiết kế index và batch processing cho CDR và thống kê cuối ngày",
+        "Phối hợp triển khai hệ thống với đội network/infra (phân bố module, HA active-active / active-standby)",
+        "Hỗ trợ kiểm thử luồng SIP, RTP và các kịch bản cuộc gọi thực tế trên mạng Viettel"
+      ],
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "JSP/Servlet",
+        "HTML",
+        "JavaScript",
+        "MariaDB",
+        "MySQL"
+      ],
+      "protocols": [
+        "SOAP",
+        "REST",
+        "SIP",
+        "RTP"
+      ],
+      "status": "shipped",
+      "type": "Web/Wap",
+      "year": "2018–2019",
+      "link": "https://mecall.vn/",
+      "note": "Đã bàn giao cho Viettel, hiện không còn tham gia bảo trì.",
+      "introLink": "https://viettel.vn/vi/viettel-services/gia-tang/vrbt",
+      "bgCover": "images/project/vrbt/vrbt-vietel.jpg"
+    },
+    {
+      "id": "vec-toll-monitoring-reconciliation",
+      "name": "VEC – Toll Monitoring & Revenue Reconciliation System",
+      "client": "Vietnam Expressway Corporation (VEC)",
+      "domain": "ITS / Smart Transportation",
+      "country": "Vietnam",
+      "summary": "Hệ thống giám sát và đối soát thu phí cho 4 tuyến cao tốc của VEC, hỗ trợ thu thập dữ liệu giao dịch, phát hiện sai lệch, phân tích lưu lượng và báo cáo doanh thu theo thời gian thực.",
+      "responsibilities": [
+        "Đóng vai trò technical leader: thiết kế kiến trúc tổng thể, phân công công việc và theo dõi tiến độ dự án",
+        "Xây dựng backend microservice cho các module: giám sát, đối soát, thu thập dữ liệu, báo cáo và quản trị hệ thống",
+        "Thiết kế pipeline xử lý dữ liệu giao dịch lớn từ thiết bị trạm qua RabbitMQ",
+        "Phát triển API tìm kiếm, lọc và phân trang giao dịch với logic nghiệp vụ phức tạp",
+        "Tối ưu truy vấn PostgreSQL và ClickHouse cho thống kê và báo cáo doanh thu",
+        "Triển khai cơ chế phân quyền người dùng theo tuyến/trạm",
+        "Xây dựng chức năng export Excel dữ liệu lớn (100k+ bản ghi/ngày)",
+        "Triển khai hệ thống on-premise cho 4 tuyến cao tốc: Cầu Giẽ – Ninh Bình, Hà Nội – Lào Cai, Đà Nẵng – Quảng Ngãi, Hà Nội – Long Thành – Dầu Giây"
+      ],
+      "tech": [
+        "Spring Boot",
+        "Java",
+        "PostgreSQL",
+        "ClickHouse",
+        "RabbitMQ",
+        "Vue.js",
+        "Docker"
+      ],
+      "protocols": [
+        "REST"
+      ],
+      "status": "shipped",
+      "type": "Web / Microservices",
+      "year": "2024–2025",
+      "link": "",
+      "note": "Đã nghiệm thu và đưa vào vận hành tại VEC; hiện tiếp tục hỗ trợ tối ưu hiệu năng và mở rộng tính năng.",
+      "introLink": "",
+      "bgCover": "images/project/vec-toll.png"
+    },
+    {
+      "id": "mobifone-ads-platform",
+      "name": "Mobifone ADS Platform – Centralized Advertising System (Phase 1)",
+      "client": "Mobifone",
+      "domain": "Telecom / Digital Advertising",
+      "country": "Vietnam",
+      "summary": "Nền tảng quảng cáo tập trung cho Mobifone (DSP + DMP) cho phép doanh nghiệp triển khai chiến dịch marketing đa kênh dựa trên dữ liệu thuê bao viễn thông, hỗ trợ segmentation, workflow automation, A/B testing và báo cáo phân tích hiệu quả chiến dịch theo thời gian thực.",
+      "responsibilities": [
+        "Phát triển backend bằng C# (.NET) cho nền tảng Ads Platform (DSP), xử lý campaign, workflow và dữ liệu thuê bao",
+        "Phát triển frontend Angular cho CMS Admin quản lý chiến dịch quảng cáo và dashboard báo cáo",
+        "Xây dựng hệ thống quản lý chiến dịch đa kênh: SMS, Push Notification, Zalo, Email và Publisher Display",
+        "Thiết kế module segmentation để phân nhóm thuê bao theo hành vi và thuộc tính",
+        "Xây dựng workflow engine cho campaign journey: start → in journey → conversion → purchase",
+        "Phát triển chức năng A/B testing để tối ưu nội dung quảng cáo",
+        "Xây dựng hệ thống báo cáo chiến dịch: lượt tham gia, chuyển đổi, giao dịch và đóng góp doanh thu",
+        "Tích hợp hệ thống bán hàng tập trung (CBS), invoice Mobifone và payment",
+        "Xử lý nguồn sự kiện từ tapping viễn thông và sự kiện tự định nghĩa của khách hàng doanh nghiệp",
+        "Tối ưu truy vấn database cho báo cáo lớn và dashboard phân tích"
+      ],
+      "tech": [
+        ".NET 9.0",
+        "Angular",
+        "MySQL",
+        "Redis"
+      ],
+      "protocols": [
+        "REST"
+      ],
+      "status": "shipped",
+      "type": "Web / Advertising Platform",
+      "year": "2019–2020",
+      "link": "",
+      "note": "Nền tảng quảng cáo tập trung pha 1 cho Mobifone: DSP + DMP, workflow campaign, segmentation, A/B testing và báo cáo phân tích đa kênh.",
+      "introLink": "",
+      "bgCover": "images/project/mobifone-ads.png"
+    },
+    {
+      "id": "aed-advisory-platform",
+      "name": "AED – Advisory Expert Directory Platform",
+      "client": "AED (Government Advisory System)",
+      "domain": "E-Government / Digital Services",
+      "country": "Vietnam",
+      "summary": "Nền tảng quản lý hồ sơ tư vấn cho cá nhân và tổ chức, hỗ trợ quy trình đăng ký – nâng cấp hồ sơ – duyệt nhiều cấp – xác thực CCCD/doanh nghiệp và công bố thông tin chuyên gia trên cổng điện tử.",
+      "responsibilities": [
+        "Phát triển backend bằng C# (.NET) cho các module hồ sơ tư vấn, nâng cấp tài khoản, duyệt Admin và versioning dữ liệu",
+        "Xây dựng frontend Angular cho CMS Admin và Portal người dùng",
+        "Thiết kế workflow duyệt hồ sơ nhiều bước (submit → review → feedback → resubmit → approve/reject)",
+        "Xử lý versioning hồ sơ và data change tracking giữa các lần cập nhật",
+        "Triển khai validate dữ liệu phức tạp: CCCD/Hộ chiếu, số điện thoại, file đính kèm",
+        "Xây dựng phân quyền theo vai trò: Admin, Ngành/Cục, Tổ chức tư vấn, Cá nhân tư vấn",
+        "Phát triển chức năng thông báo email theo trạng thái duyệt",
+        "Fix bug và xử lý change request sau Go-Live (lưu tạm hồ sơ, đồng bộ dữ liệu, upload file, thống kê)",
+        "Hỗ trợ UAT và triển khai production"
+      ],
+      "tech": [
+        "C#",
+        ".NET",
+        "Angular",
+        "PostgreSQL",
+        "Entity Framework",
+        "REST API"
+      ],
+      "protocols": [
+        "REST"
+      ],
+      "status": "shipped",
+      "type": "Web Platform",
+      "year": "2023–2024",
+      "link": "",
+      "note": "Đã Go-Live; tham gia phát triển core backend, frontend Angular và xử lý nhiều nghiệp vụ phức tạp về hồ sơ, duyệt và versioning dữ liệu.",
+      "introLink": "",
+      "bgCover": "images/project/aed-advisory.png"
+    },
+    {
+      "id": "buzzme-mobifone",
+      "name": "BuzzMe – Missed Call Notification Platform",
+      "client": "Mobifone",
+      "domain": "Telecom / Value Added Services",
+      "country": "Vietnam",
+      "summary": "Hệ thống BuzzMe cho phép thuê bao Mobifone tạo cuộc gọi nhỡ hoặc gửi SMS/USSD thông báo khi người gọi hết tiền hoặc người được gọi đang bận, giúp tăng tỷ lệ kết nối cuộc gọi thành công và doanh thu mạng.",
+      "responsibilities": [
+        "Tham gia phát triển và tối ưu backend cho hệ thống BuzzMe với kiến trúc module phân tán",
+        "Xây dựng và vận hành các service CRS, CallAgent, SMS/USSD Consumer, ProvCore",
+        "Thiết kế luồng xử lý sự kiện cuộc gọi (busy / not-enough-money) qua RabbitMQ",
+        "Tích hợp với hệ thống Core Mobifone: GMSC, SMPPGW, USSDGW, Charging, CDR",
+        "Xử lý CDR, callback-mapper và đồng bộ dữ liệu thuê bao",
+        "Tối ưu rule engine cho logic tạo buzz call / SMS / USSD",
+        "Hỗ trợ triển khai on-premise tại site Mobifone (HN/HCM)",
+        "Tham gia xử lý sự cố production: network partition RabbitMQ, đồng bộ DB, tracing call flow",
+        "Viết script vận hành (crontab, auto-start, log rotation, health check)"
+      ],
+      "tech": [
+        "Java",
+        "Spring",
+        "RabbitMQ",
+        "Redis",
+        "Oracle",
+        "Linux",
+        "Shell Script"
+      ],
+      "protocols": [
+        "SMPP",
+        "USSD",
+        "SIP",
+        "DIAMETER",
+        "REST"
+      ],
+      "status": "shipped",
+      "type": "Telecom Platform / On-premise",
+      "year": "2021–2022",
+      "link": "",
+      "note": "Dự án BuzzMe Mobifone – tham gia phát triển core service, vận hành hệ thống, tối ưu RabbitMQ và xử lý sự cố production.",
+      "introLink": "",
+      "bgCover": "images/project/buzzme-ott.png"
+    },
+    {
+      "id": "v2t-mobifone",
+      "name": "V2T – Voice to Text & Anti-Fraud Platform",
+      "client": "Mobifone",
+      "domain": "Telecom / Voice Analytics / Anti-Fraud",
+      "country": "Vietnam",
+      "summary": "Nền tảng Voice-to-Text cho dịch vụ Lời nhắn thoại của Mobifone, kết hợp cơ chế lọc keyword nhạy cảm/lừa đảo, fuzzy matching và blacklist tự động nhằm ngăn chặn các cuộc gọi lừa đảo và bảo vệ người dùng.",
+      "responsibilities": [
+        "Phát triển module Voice-to-Text tích hợp vào hệ thống Lời nhắn thoại",
+        "Thiết kế luồng xử lý V2T → APS → SMS/Voice playback theo từng loại nội dung",
+        "Xây dựng cơ chế chuẩn hóa Unicode và fuzzy matching để phát hiện keyword lừa đảo ngay cả khi nói lái/nói ngọng",
+        "Thiết kế hệ thống quản lý keyword (lừa đảo, phản cảm, nghi ngờ) từ file cấu hình sang database và CMS web",
+        "Phát triển chức năng tự động đưa thuê bao spam vào Blacklist",
+        "Xây dựng báo cáo thống kê: tỷ lệ chuyển đổi V2T, sản lượng lời nhắn, doanh thu nội/ngoại mạng",
+        "Tối ưu database VOICE_TEXT (index, partition) để xử lý dữ liệu lớn và tăng tốc truy vấn",
+        "Xây dựng cơ chế giám sát keyword lặp lại nhiều lần để cảnh báo sớm hành vi lừa đảo",
+        "Triển khai hệ thống on-premise tại Private Cloud Mobifone và hỗ trợ vận hành production"
+      ],
+      "tech": [
+        "Java",
+        "Spring",
+        "Oracle",
+        "RabbitMQ",
+        "Redis",
+        "Linux",
+        "Shell Script"
+      ],
+      "protocols": [
+        "REST",
+        "SIP",
+        "SMPP",
+        "USSD"
+      ],
+      "status": "shipped",
+      "type": "Telecom Platform / Voice Analytics",
+      "year": "2022–2023",
+      "link": "",
+      "note": "Dự án nâng cấp hệ thống Lời nhắn thoại Mobifone: bổ sung Voice-to-Text, lọc keyword lừa đảo bằng fuzzy matching, blacklist tự động và báo cáo doanh thu.",
+      "introLink": "",
+      "bgCover": "images/project/v2t-speech.png"
+    },
+    {
+      "id": "ewim-weight-in-motion",
+      "name": "eWIM – Electronic Weigh-In-Motion System",
+      "client": "Government / Traffic Authority",
+      "domain": "ITS / Smart Transportation",
+      "country": "Vietnam",
+      "summary": "Hệ thống cân xe tự động eWIM phát hiện vi phạm quá tải khi xe đang di chuyển, hỗ trợ hậu kiểm, in phiếu cân, xuất hồ sơ xử phạt và quản lý dữ liệu hình ảnh/video theo thời gian thực trên một nền tảng C# ASP.NET MVC all-in-one.",
+      "responsibilities": [
+        "Phát triển toàn bộ hệ thống theo mô hình C# ASP.NET MVC (Controller + View + Model trong một project)",
+        "Xây dựng module Hậu kiểm: kiểm duyệt vi phạm, phân loại mức độ xử phạt và lưu lịch sử thao tác",
+        "Thiết kế workflow xử lý vi phạm: đủ điều kiện xử phạt / chưa đến mức xử phạt / chưa đủ thông tin",
+        "Xây dựng chức năng tìm kiếm và lọc vi phạm theo thời gian, làn xe và biển số",
+        "Tích hợp hiển thị hình ảnh và video vi phạm trực tiếp trên giao diện MVC",
+        "Phát triển chức năng in phiếu cân (PDF) và xuất hồ sơ vi phạm (PDF + ảnh + video)",
+        "Triển khai phân quyền người dùng: Quản trị, Hậu kiểm, Giám sát cấp 1/2",
+        "Tham gia xây dựng Security Box: whitelist IP, quản lý tài khoản và mã hóa dữ liệu tải trọng trước khi truyền về trung tâm",
+        "Tối ưu truy vấn và lưu trữ dữ liệu phiên cân với Entity Framework",
+        "Hỗ trợ triển khai onsite, vận hành và nghiệm thu hệ thống"
+      ],
+      "tech": [
+        "C#",
+        "ASP.NET MVC",
+        "Entity Framework",
+        "PostgreSQL",
+        "Linux"
+      ],
+      "protocols": [
+        "REST",
+        "SOAP"
+      ],
+      "status": "shipped",
+      "type": "Web / ITS Platform (Monolithic MVC)",
+      "year": "2024",
+      "link": "",
+      "note": "Dự án eWIM được xây dựng dạng monolithic ASP.NET MVC all-in-one, không tách frontend riêng; tập trung vào hậu kiểm vi phạm, xuất hồ sơ xử phạt và bảo mật dữ liệu cân.",
+      "introLink": "",
+      "bgCover": "images/project/ewim-weigh.png"
+    },
+    {
+      "id": "mlearn-vn",
+      "name": "mLearn.vn – E-Learning Platform",
+      "client": "mLearn / Education Startup",
+      "domain": "EdTech / E-Learning",
+      "country": "Vietnam",
+      "summary": "Nền tảng học trực tuyến cho phép người dùng truy cập khóa học video, làm bài kiểm tra, theo dõi tiến độ và đánh giá kết quả học tập trên kiến trúc frontend Vue.js và backend Spring Boot.",
+      "responsibilities": [
+        "Phát triển backend bằng Java Spring Boot cho hệ thống e-learning",
+        "Xây dựng API REST quản lý khóa học, bài học video, bài kiểm tra và người dùng",
+        "Phát triển frontend Vue.js hiển thị nội dung khóa học và tiến độ học viên",
+        "Thiết kế phân quyền theo vai trò: học viên, giảng viên, admin",
+        "Xây dựng chức năng ghi danh khóa học và tracking tiến độ",
+        "Tối ưu truy vấn database cho thống kê học tập",
+        "Triển khai hệ thống production và hỗ trợ vận hành"
+      ],
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "Vue.js",
+        "JPA/Hibernate",
+        "MySQL",
+        "Docker"
+      ],
+      "protocols": [
+        "REST",
+        "RABBITMQ"
+      ],
+      "status": "shipped",
+      "type": "Web Platform",
+      "year": "2021–2022",
+      "link": "https://mlearn.vn/",
+      "note": "Nền tảng học trực tuyến sử dụng Vue.js frontend và Spring Boot backend, hỗ trợ video learning, quiz và theo dõi tiến độ.",
+      "introLink": "",
+      "bgCover": "images/project/mlearn-vn.png"
+    },
+    {
+      "id": "colearn-vn",
+      "name": "CoLearn.vn – Online Learning Community",
+      "client": "CoLearn / Education Startup",
+      "domain": "EdTech / Social Learning",
+      "country": "Vietnam",
+      "summary": "Nền tảng cộng đồng học tập kết hợp hệ thống khóa học cho phép học viên tương tác, chia sẻ tài liệu, thảo luận nhóm và tham gia lớp học trực tuyến.",
+      "responsibilities": [
+        "Phát triển backend Spring Boot cho module người dùng, bài viết, bình luận, nhóm học và khóa học",
+        "Xây dựng API REST cho các chức năng social: post, comment, tương tác cộng đồng",
+        "Phát triển frontend Vue.js cho portal học tập và cộng đồng",
+        "Thiết kế hệ thống phân quyền và bảo mật nội dung theo vai trò người dùng",
+        "Xây dựng chức năng quản lý nhóm học và chia sẻ tài liệu",
+        "Tối ưu hiệu năng API và truy vấn database",
+        "Hỗ trợ kiểm thử và triển khai production"
+      ],
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "Vue.js",
+        "JPA/Hibernate",
+        "MySQL",
+        "Docker"
+      ],
+      "protocols": [
+        "REST",
+        "RABBITMQ"
+      ],
+      "status": "shipped",
+      "type": "Web Platform",
+      "year": "2022–2023",
+      "link": "https://colearn.vn/",
+      "note": "Nền tảng học tập kết hợp mạng xã hội, sử dụng Vue.js frontend và Spring Boot backend.",
+      "introLink": "",
+      "bgCover": "images/project/colearn-vn.png"
+    },
+    {
+      "id": "livestream-tournament-platform",
+      "name": "Livestream Tournament Platform",
+      "client": "Telecom / OTT Partner",
+      "domain": "Livestream / Video Platform",
+      "country": "Vietnam",
+      "summary": "Nền tảng livestream cho phép tạo và phát trực tiếp giải đấu, quản lý lịch live, xem lại video đã phát và vận hành hệ thống stream qua LiveGateway. Admin tạo phiên live và sinh streamKey, EndUser lấy streamKey trên trang Admin để cấu hình OBS và bắt đầu livestream; hệ thống phát luồng cho người xem qua HLS và nhận callback khi kết thúc live.",
+      "responsibilities": [
+        "Phát triển frontend Vue.js cho trang xem livestream và CMS Admin quản lý phiên live",
+        "Phát triển backend microservice bằng Spring Boot + Spring Cloud Eureka",
+        "Thiết kế luồng tạo livestream giải đấu: tạo phiên live, sinh streamKey và cấu hình/đồng bộ với LiveGateway",
+        "Xây dựng trang Admin để EndUser lấy streamKey và hướng dẫn cấu hình OBS để bắt đầu livestream",
+        "Tích hợp LiveGateway: nhận luồng livestream từ LiveGateway và phân phối cho người xem qua HLS",
+        "Xử lý callback từ LiveGateway khi EndUser kết thúc livestream để cập nhật trạng thái phiên live và sinh replay",
+        "Phát triển chức năng lên lịch livestream, quản lý trạng thái (scheduled / live / ended) và lịch sử phiên live",
+        "Phát triển chức năng xem lại video đã livestream (VOD/replay)",
+        "Xây dựng API quản lý streamKey, bảo mật luồng live và phân quyền CMS",
+        "Hỗ trợ kiểm thử UAT và triển khai production"
+      ],
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "Spring Cloud",
+        "Eureka",
+        "Vue.js",
+        "MySQL",
+        "Redis",
+        "Docker"
+      ],
+      "protocols": [
+        "REST",
+        "RTMP",
+        "HLS"
+      ],
+      "status": "shipped",
+      "type": "Web / Livestream Platform",
+      "year": "2023–2024",
+      "link": "",
+      "note": "Flow: Admin tạo live & sinh streamKey → EndUser nhập streamKey vào OBS để push stream lên LiveGateway → hệ thống phát HLS và nhận callback khi end live để tạo replay.",
+      "introLink": "",
+      "bgCover": "images/project/livestream-platform.png"
+    },
+    {
+      "id": "sing4u-myanmar",
+      "name": "Sing4U – Karaoke & Social Singing Platform",
+      "client": "Telecom Partner – Myanmar",
+      "domain": "Telecom / Entertainment",
+      "country": "Myanmar",
+      "summary": "Nền tảng karaoke và hát cùng cộng đồng cho thị trường Myanmar, cho phép người dùng nghe nhạc, thu âm bài hát, chia sẻ bản ghi và tương tác xã hội; tích hợp đăng ký gói cước qua nhà mạng để mở khóa nội dung.",
+      "responsibilities": [
+        "Phát triển backend cho dịch vụ Sing4U: quản lý bài hát, thu âm, phát lại và hồ sơ người dùng",
+        "Xây dựng CMS Admin quản lý nội dung karaoke (bài hát, ca sĩ, thể loại) và duyệt nội dung",
+        "Thiết kế luồng đăng ký gói cước qua nhà mạng để mở khóa quyền lợi người dùng",
+        "Phát triển API cho chức năng thu âm, lưu trữ và phát lại bản ghi",
+        "Xây dựng các module tương tác: like, share, comment cho bản ghi người dùng",
+        "Tích hợp hệ thống Telco qua REST/SOAP để xử lý đăng ký/hủy gói và đồng bộ trạng thái thuê bao",
+        "Tối ưu truy vấn database cho thống kê lượt nghe, lượt thu âm và doanh thu",
+        "Hỗ trợ triển khai production và vận hành giai đoạn đầu tại thị trường Myanmar"
+      ],
+      "tech": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "Redis",
+        "Docker"
+      ],
+      "protocols": [
+        "REST",
+        "SOAP"
+      ],
+      "status": "shipped",
+      "type": "Web / Mobile Service",
+      "year": "2020–2021",
+      "link": "",
+      "note": "Dịch vụ karaoke Sing4U triển khai cho thị trường Myanmar, tích hợp gói cước nhà mạng và nền tảng hát – thu âm – chia sẻ.",
+      "introLink": "",
+      "bgCover": "images/project/sing4u-myanmar.png"
+    }
+  ],
+  "contact": {
+    "email": "phuongpyke@gmail.com",
+    "phone": "+84 357 123 633",
+    "website": "***",
+    "github": "***",
+    "linkedin": "***"
+  },
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "***"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "***"
+    }
+  ]
+}

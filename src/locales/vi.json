@@ -1,0 +1,117 @@
+{
+  "common": {
+    "readMore": "Xem thêm",
+    "readLess": "Thu gọn",
+    "noResults": "Không có kết quả phù hợp."
+  },
+  "nav": { "home": "Trang chủ", "about": "Giới thiệu", "skills": "Kỹ năng", "projects": "Dự án", "contact": "Liên hệ" },
+  "hero": { "title": "Kỹ sư Phần mềm", "location": "TP. Hà Nội, Việt Nam" },
+  "summary": "Kỹ sư đam mê với 7+ năm làm web bằng Vue, Spring Boot, .NET và PostgreSQL.",
+  "sections": { "summary": "Tóm tắt", "about": "Giới thiệu", "skills": "Kỹ năng", "projects": "Dự án", "contact": "Liên hệ" },
+  "contact": { "email": "Email", "phone": "Điện thoại", "github": "GitHub", "linkedin": "LinkedIn" },
+  "actions": { "view": "Xem", "language": "Ngôn ngữ" },
+  "activities": {
+    "other": "Hoạt động",
+    "soccer": "Bóng đá",
+    "pickleball": "Pickleball",
+    "charity": "Thiện Nguyện",
+    "teambuilding": "Du lịch"
+  },
+  "feed": {
+    "all": "Tất cả",
+    "photos": "Có ảnh",
+    "liked": "Đã thích"
+  },
+  "post": {
+    "placeholder": "Bạn đang nghĩ gì?",
+    "addPhotos": "Thêm ảnh",
+    "publish": "Đăng",
+    "feedTitle": "Bài viết mới",
+    "placePlaceholder": "Địa điểm",
+    "like": "Thích",
+    "liked": "Đã thích",
+    "comment": "Bình luận",
+    "share": "Chia sẻ"
+  },
+
+  "rating": { "terrible": "Tệ", "bad": "Chưa tốt", "ok": "Ổn", "good": "Tốt", "excellent": "Xuất sắc" },
+
+
+  "assistant": {
+    "title": "Trợ lý ảo",
+    "hello": "Xin chào!",
+    "intro": "Tôi là trợ lý ảo của {name}. Tôi có thể giúp gì cho bạn?",
+    "cta": "Chat",
+    "greeting": "Chào bạn! Mình là trợ lý ảo của {name}.",
+    "suggest": "Bạn có thể hỏi về công việc, kỹ năng, dự án, tính cách hoặc thông tin liên hệ.",
+    "placeholder": "Nhập tin nhắn...",
+    "send": "Gửi",
+    "aboutWork": "Hiện {title} tại {location}.",
+    "aboutSkills": "Các kỹ năng nổi bật: {skills}",
+    "aboutProjects": "Một vài dự án gần đây:",
+    "contact": "Thông tin liên hệ:",
+    "generic": "Mình đã ghi nhận câu hỏi. Bạn muốn hỏi về công việc, kỹ năng, dự án, tính cách hay liên hệ?",
+    "noData": "Chưa có dữ liệu"
+  },
+
+  "about": {
+    "title": "Giới thiệu",
+    "years": "năm",
+    "projects": "dự án",
+    "talks": "bài nói",
+    "downloadCV": "Tải CV",
+    "contact": "Liên hệ",
+    "interests": "Sở thích",
+    "certs": "Chứng chỉ",
+    "certsAndLangs": "Chứng chỉ & Ngôn ngữ",
+    "languages": "Ngôn ngữ",
+    "bioTitle": "Tiểu sử",
+    "educationTitle": "Học vấn",
+    "now": "hiện tại"
+  },
+
+  "skills": {
+    "title": "Kỹ năng",
+    "featured": "Nhóm kỹ năng nổi bật",
+    "all": "Tất cả kỹ năng",
+    "search": "Tìm kỹ năng..."
+  },
+  "projects": {
+    "title": "Dự án",
+    "search": "Tìm theo tên, tech...",
+    "allDomains": "Tất cả mảng",
+    "allTech": "Tất cả tech",
+    "types": {
+      "web": "Web",
+      "backend": "Backend",
+      "data": "Data",
+      "devops": "DevOps",
+      "mobile": "Mobile",
+      "ml": "ML/AI"
+    },
+    "status": {
+      "active": "Đang làm",
+      "shipped": "Đã bàn giao",
+      "archived": "Lưu trữ"
+    },
+    "tech": "Công nghệ",
+    "links": "Liên kết",
+    "demo": "Demo",
+    "repo": "Source",
+    "details": {
+      "client": "Khách hàng",
+      "domain": "Mảng",
+      "country": "Quốc gia",
+      "year": "Thời gian",
+      "status": "Trạng thái",
+      "type": "Loại",
+      "responsibilities": "Trách nhiệm",
+      "protocols": "Giao thức tích hợp",
+      "technologies": "Công nghệ",
+      "links": "Liên kết",
+      "repo": "Mã nguồn",
+      "demo": "Demo",
+      "close": "Đóng"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "common": {
+    "readMore": "Read more",
+    "readLess": "Show less",
+    "noResults": "No matching results."
+  },
+  "nav": { "home": "Home", "about": "About", "skills": "Skills", "projects": "Projects", "contact": "Contact" },
+  "hero": { "title": "Software Engineer", "location": "Ho Chi Minh City, Vietnam" },
+  "summary": "Passionate engineer with 3+ years building web apps using Vue, Spring Boot, .NET and PostgreSQL.",
+  "sections": { "summary": "Summary", "about": "About", "skills": "Skills", "projects": "Projects", "contact": "Contact" },
+  "contact": { "email": "Email", "phone": "Phone", "github": "GitHub", "linkedin": "LinkedIn" },
+  "actions": { "view": "View", "language": "Language" },
+  "activities": {
+    "other": "Activity",
+    "soccer": "Soccer",
+    "pickleball": "Pickleball",
+    "charity": "Charity",
+    "teambuilding": "Teambuilding"
+  },
+  "feed": {
+    "all": "All",
+    "photos": "Photos",
+    "liked": "Liked"
+  },
+  "post": {
+    "placeholder": "What's on your mind?",
+    "addPhotos": "Add photos",
+    "publish": "Post",
+    "feedTitle": "Recent posts",
+    "placePlaceholder": "Location",
+    "like": "Like",
+    "liked": "Liked",
+    "comment": "Comment",
+    "share": "Share"
+  },
+  "rating": { "terrible": "Terrible", "bad": "Bad", "ok": "OK", "good": "Good", "excellent": "Excellent" },
+
+
+  "assistant": {
+    "title": "Virtual Assistant",
+    "hello": "Hello!",
+    "intro": "I'm {name}'s AI assistant. How can I help?",
+    "cta": "Chat",
+    "greeting": "Hi! I'm {name}'s assistant.",
+    "suggest": "You can ask about work, skills, projects, personality or contact info.",
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "aboutWork": "{title} in {location}.",
+    "aboutSkills": "Key skills: {skills}",
+    "aboutProjects": "Some recent projects:",
+    "contact": "Contact info:",
+    "generic": "Got it. Would you like to ask about work, skills, projects, personality or contact?",
+    "noData": "No data yet"
+  },
+  "about": {
+    "title": "About",
+    "years": "years",
+    "projects": "projects",
+    "talks": "talks",
+    "downloadCV": "Download CV",
+    "contact": "Contact",
+    "interests": "Interests",
+    "certs": "Certifications",
+    "certsAndLangs": "Certifications & Languages",
+    "languages": "Languages",
+    "bioTitle": "Bio",
+    "educationTitle": "Education",
+    "now": "now"
+  },
+
+  "skills": {
+    "title": "Skills",
+    "featured": "Featured stack",
+    "all": "All skills",
+    "search": "Search skills..."
+  },
+  "projects": {
+    "title": "Projects",
+    "search": "Search by name, tech…",
+    "allDomains": "All domains",
+    "allTech": "All technologies",
+    "types": {
+      "web": "Web",
+      "backend": "Backend",
+      "data": "Data",
+      "devops": "DevOps",
+      "mobile": "Mobile",
+      "ml": "ML/AI"
+    },
+    "status": {
+      "active": "Active",
+      "shipped": "Shipped",
+      "archived": "Archived"
+    },
+    "tech": "Technologies",
+    "links": "Links",
+    "demo": "Demo",
+    "repo": "Source",
+    "details": {
+      "client": "Client",
+      "domain": "Domain",
+      "country": "Country",
+      "year": "Year",
+      "status": "Status",
+      "type": "Type",
+      "responsibilities": "Responsibilities",
+      "protocols": "Protocols",
+      "technologies": "Technologies",
+      "links": "Links",
+      "repo": "Source",
+      "demo": "Demo",
+      "close": "Close"
+    }
+  }
+}
