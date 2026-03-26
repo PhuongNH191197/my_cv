@@ -72,5 +72,9 @@ app.post('/assistant', assistantHandler)
 app.post('/api/assistant', assistantHandler)
 
 // Khởi động
-const PORT = process.env.PORT || 8080
-app.listen(PORT, () => console.log(`API on http://localhost:${PORT}`))
+if (!process.env.VERCEL) {
+    const PORT = process.env.PORT || 8080
+    app.listen(PORT, () => console.log(`API on http://localhost:${PORT}`))
+}
+
+export default app
