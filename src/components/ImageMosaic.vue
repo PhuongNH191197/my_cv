@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
+import { computed, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 
 const props = defineProps({
   images: { type: Array, default: () => [] }, // mảng URL (ảnh hoặc video)
@@ -19,12 +19,15 @@ function open(i = 0) {
   if (!props.images.length) return
   idx.value = i
   isOpen.value = true
-  document.body.style.overflow = 'hidden'
 }
 function close() {
   isOpen.value = false
-  document.body.style.overflow = ''
 }
+
+watch(isOpen, (val) => {
+  if (val) document.body.style.overflow = 'hidden'
+  else document.body.style.overflow = ''
+})
 function next() {
   if (!props.images.length) return
   idx.value = (idx.value + 1) % props.images.length
@@ -72,32 +75,40 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
     </div>
 
     <!-- Lightbox -->
-    <transition name="fade">
-      <div v-if="isOpen" class="lb" @click.self="close">
-        <button class="lb-close" @click="close" aria-label="Close">✕</button>
-        <button class="lb-nav prev" @click.stop="prev" aria-label="Previous">‹</button>
+    <Teleport to="body">
+      <transition name="lb-fade">
+        <div v-if="isOpen" class="lb" @click.self="close">
+          <button class="lb-close" @click="close" aria-label="Close">✕</button>
+          
+          <button class="lb-nav prev" @click.stop="prev" aria-label="Previous">‹</button>
 
-        <!-- Media in lightbox -->
-        <img
-            v-if="isImage(current)"
-            class="lb-media"
-            :src="current"
-            :alt="`photo-${idx+1}`"
-        />
-        <video
-            v-else-if="isVideo(current)"
-            class="lb-media"
-            :key="idx"
-        :src="current"
-        controls
-        autoplay
-        playsinline
-        />
+          <div class="lb-content">
+            <transition name="lb-slide" mode="out-in">
+              <div :key="idx" class="lb-media-frame">
+                <img
+                    v-if="isImage(current)"
+                    class="lb-media"
+                    :src="current"
+                    :alt="`photo-${idx+1}`"
+                />
+                <video
+                    v-else-if="isVideo(current)"
+                    class="lb-media"
+                    :src="current"
+                    controls
+                    autoplay
+                    playsinline
+                />
+              </div>
+            </transition>
+          </div>
 
-        <button class="lb-nav next" @click.stop="next" aria-label="Next">›</button>
-        <div class="lb-count">{{ idx + 1 }} / {{ props.images.length }}</div>
-      </div>
-    </transition>
+          <button class="lb-nav next" @click.stop="next" aria-label="Next">›</button>
+          
+          <div class="lb-count">{{ idx + 1 }} / {{ props.images.length }}</div>
+        </div>
+      </transition>
+    </Teleport>
   </div>
 </template>
 
@@ -135,33 +146,86 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
   .tile.primary { grid-column: span 2 }
 }
 
-/* Lightbox */
-.fade-enter-active, .fade-leave-active { transition: opacity .18s ease }
-.fade-enter-from, .fade-leave-to { opacity: 0 }
+/* Lightbox Transitions */
+.lb-fade-enter-active, .lb-fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.lb-fade-enter-from, .lb-fade-leave-to {
+  opacity: 0;
+}
+
+.lb-slide-enter-active, .lb-slide-leave-active {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lb-slide-enter-from {
+  opacity: 0;
+  transform: scale(0.96) translateY(5px);
+}
+.lb-slide-leave-to {
+  opacity: 0;
+  transform: scale(1.04) translateY(-5px);
+}
+
 .lb {
-  position: fixed; inset: 0; z-index: 1000;
-  background: rgba(0,0,0,.86);
+  position: fixed; inset: 0; z-index: 999999;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(15px);
   display: flex; align-items: center; justify-content: center;
 }
+.lb-content {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px;
+}
+.lb-media-frame {
+  width: auto; height: auto;
+  max-width: 90vw; max-height: 80vh;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+  will-change: transform, opacity;
+}
 .lb-media {
-  max-width: 92vw; max-height: 82vh; border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.5);
-  background: #000; /* tránh viền trắng khi video nhỏ */
+  max-width: 100%; max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .lb-close {
-  position: absolute; top: 16px; right: 16px;
-  background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.25);
-  padding: .25rem .5rem; border-radius: 8px; cursor: pointer;
+  position: absolute; top: env(safe-area-inset-top, 20px); right: 20px; z-index: 10100;
+  background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2);
+  width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+  transition: all 0.2s ease;
 }
+.lb-close:hover { background: rgba(255,255,255,0.2); }
+
 .lb-nav {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(0,0,0,.35); border: 0; color: #fff;
-  font-size: 2rem; cursor: pointer; padding: .25rem .6rem; border-radius: 8px;
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 10100;
+  background: rgba(255,255,255,0.05); border: 0;
+  color: #fff; width: 50px; height: 50px; border-radius: 50%;
+  font-size: 2.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s ease;
 }
-.lb-nav.prev { left: 12px }
-.lb-nav.next { right: 12px }
+.lb-nav:hover { background: rgba(255,255,255,0.15); }
+.lb-nav.prev { left: 10px }
+.lb-nav.next { right: 10px }
+
 .lb-count {
-  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
-  color: #fff; font-size: .95rem; opacity: .9;
+  position: absolute; bottom: env(safe-area-inset-bottom, 20px); left: 50%; transform: translateX(-50%);
+  color: #fff; font-size: 0.9rem; font-weight: 500;
+  background: rgba(0,0,0,0.4); padding: 5px 15px; border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 640px) {
+  .lb-media-frame { max-width: 100vw; max-height: 85vh; border-radius: 0; border: 0; background: transparent; }
+  .lb-media { max-width: 100vw; max-height: 85vh; }
+  .lb-nav { width: 40px; height: 40px; font-size: 1.8rem; background: rgba(0,0,0,0.2); }
+  .lb-close { top: 15px; right: 15px; width: 40px; height: 40px; }
+  .lb-content { padding: 5px; }
 }
 </style>

@@ -67,9 +67,9 @@ function setupReveal() {
             />
           </div>
 
-          <div class="info text-truncate">
-            <h2 class="name text-truncate" :title="profile.name">{{ profile.name }}</h2>
-            <p class="muted text-truncate" :title="profile.title + ' · ' + profile.location">
+          <div class="info">
+            <h2 class="name" :title="profile.name">{{ profile.name }}</h2>
+            <p class="muted" :title="profile.title + ' · ' + profile.location">
               {{ profile.title }} · {{ profile.location }}
             </p>
 
@@ -142,11 +142,11 @@ function setupReveal() {
           <ul class="timeline">
             <li v-for="(e,i) in education" :key="i">
               <div class="dot"></div>
-              <div class="row text-truncate">
-                <strong class="text-truncate" :title="e.degree">{{ e.degree }}</strong>
+              <div class="row">
+                <strong :title="e.degree">{{ e.degree }}</strong>
                 <span class="muted" style="flex-shrink: 0">{{ e.from }} — {{ e.to || t('about.now','hiện tại') }}</span>
               </div>
-              <div class="school muted text-truncate" :title="e.school">{{ e.school }}</div>
+              <div class="school muted" :title="e.school">{{ e.school }}</div>
               <ul class="hl" v-if="e.highlights?.length">
                 <li v-for="(h,j) in e.highlights" :key="j">{{ h }}</li>
               </ul>
@@ -157,12 +157,12 @@ function setupReveal() {
         <section class="glass section reveal">
           <h3>{{ t('about.certsAndLangs','Chứng chỉ & Ngôn ngữ') }}</h3>
           <div class="twocol">
-            <div v-if="certs.length" class="text-truncate">
+            <div v-if="certs.length">
               <h4>{{ t('about.certs','Chứng chỉ') }}</h4>
-              <ul class="plain text-truncate">
-                <li v-for="c in certs" :key="c.name" class="text-truncate">
+              <ul class="plain">
+                <li v-for="c in certs" :key="c.name">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span :title="c.name" class="text-truncate">{{ c.name }}</span> <span class="muted">· Trong tương lai</span>
+                  <span :title="c.name">{{ c.name }}</span> <span class="muted">· Trong tương lai</span>
                 </li>
               </ul>
             </div>
@@ -225,6 +225,7 @@ function setupReveal() {
 @media(max-width: 640px){
   .hero{ grid-template-columns: 1fr; text-align: center }
   .info{ display: grid; justify-items: center }
+  .row { flex-wrap: wrap; }
 }
 .avatar-wrap{ position: relative; width: 110px; height: 110px; margin: 0 auto }
 .avatar{

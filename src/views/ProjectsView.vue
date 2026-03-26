@@ -162,6 +162,26 @@ const filtered = computed(() => {
 .select option{ background:#0b1220; color:#e5e7eb }
 .select:focus{ outline:none; border-color:#22d3ee66; box-shadow:0 0 0 3px rgba(34,211,238,.15) }
 
+@media (max-width: 640px) {
+  .filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .search {
+    grid-column: span 2;
+  }
+  .search input {
+    min-width: 0;
+    width: 100%;
+  }
+  .select {
+    width: 100%;
+    padding-right: 1.5rem;
+    background-position: right .4rem center;
+  }
+}
+
 .grid{
   display:grid; gap:1rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

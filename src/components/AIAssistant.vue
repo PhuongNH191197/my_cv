@@ -338,7 +338,7 @@ watch(locale, () => {
 @keyframes pulse { 0%, 100% { opacity: 0.3; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.1); } }
 
 .ai-chat__input { padding: 1rem; display: flex; gap: 0.75rem; background: rgba(255,255,255,0.02); border-top: 1px solid var(--glass-border); }
-.ai-chat__input input { flex: 1; background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); border-radius: 14px; padding: 0.75rem 1rem; color: var(--fg); outline: none; }
+.ai-chat__input input { flex: 1; background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); border-radius: 14px; padding: 0.75rem 1rem; color: var(--fg); outline: none; font-size: 16px; }
 .ai-chat__input input:focus { border-color: var(--primary); }
 .send-btn { width: 46px; height: 46px; border-radius: 12px; background: var(--primary); color: #0b1220; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
 .send-btn:disabled { opacity: 0.5; cursor: not-allowed; filter: grayscale(1); }
