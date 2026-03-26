@@ -3,7 +3,7 @@ import { createI18n } from 'vue-i18n'
 const FALLBACK = 'en'
 const saved = localStorage.getItem('locale')
 const browser = navigator.language?.startsWith('vi') ? 'vi' : 'en'
-const locale = saved || browser || FALLBACK
+export const locale = saved || browser || FALLBACK
 
 const i18n = createI18n({ legacy:false, globalInjection:true, locale, fallbackLocale: FALLBACK, messages:{} })
 
@@ -23,6 +23,6 @@ export async function setLocale(lang) {
     document.documentElement.lang = lang
 }
 
-// khởi tạo mặc định
-await loadLocale(locale)
+// khởi tạo mặc định (Xóa await ở đây để tránh lỗi build, sẽ gọi ở main.js)
+// await loadLocale(locale)
 export default i18n
